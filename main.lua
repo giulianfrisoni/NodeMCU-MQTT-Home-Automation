@@ -1,7 +1,7 @@
 
 
--- mqtt.lua   Codigo principal para el Funcionamiento de
---              Conexiones, MQTT,relay
+-- main.lua   Principal code for  connecting to wifi.
+
 -- Codigo 
 
 -- Pin mode
