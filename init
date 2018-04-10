@@ -1,0 +1,41 @@
+--init.lua  Authors: Daniela Beckmann Garcia & Giulian Frisoni
+--          Main code that runs on bootloader
+--          Used for starting Wifi connection and starting main file
+--          Saved on flash memory inside NodeMcu
+-- load credentials, 'SSID' and 'PASSWORD' declared and initialize in there
+dofile("credentials")
+
+-- Start Wifi Connection given credentials
+print("Conecting to Wifi...")
+-- Set NodeMCu as Station of local network
+wifi.setmode(wifi.STATION)
+--SSID and PASSWORD are loaded on: dofile("credentials")
+wifi.sta.config(SSID, PASSWORD) 
+-- Start connection and retry till connected 
+wifi.sta.connect()
+tmr.alarm(1, 1000, 1, function()
+  if wifi.sta.getip() == nil then
+    print("Waiting for local IP...")
+  else
+    tmr.stop(1)
+    print("Connection established, IP : " .. wifi.sta.getip())
+    print("3 seconds to abort startup")
+    print("Waiting...")
+    -- Wait 3 seconds and run start function
+    tmr.alarm(0, 3000, 0, start) 
+  end
+end)
+
+
+function start()
+  if file.open("init") == nil then
+    print("init.lua was erased or renamed")
+  else
+  -- If init is present close it and startmain file.
+    print("Starting")
+    file.close("init")
+   
+   dofile("main")
+  end
+end
+
