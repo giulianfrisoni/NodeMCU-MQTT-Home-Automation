@@ -15,5 +15,7 @@ https://esp8266.ru/esplorer/
 -nodeMCU rev3 Board that can be shopped easily and is cheap.
 -3.3v/120AC Switch for controlling lights.
 -3.3V Person Sensor that can be shopped online easily.
+- Wemos Uno R1 (Arduino Uno WIFI based)
+- DHT temperature sensor.
 
 ## Procedure
