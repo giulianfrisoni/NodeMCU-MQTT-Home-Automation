@@ -60,6 +60,6 @@ allow_anonymous false
  ```
 There are other parameter we can change as listeners,ports,etc in this tutorial we are running mosquitto on an offline local network so more  security was not needed if you need to listen on other ports nad some others configuration like SSL and webpockets look at this page:
 
-http://manpages.ubuntu.com/manpages/xenial/man5/mosquitto.conf.5.html
+https://mosquitto.org/man/mosquitto-conf-5.html#
 
 
