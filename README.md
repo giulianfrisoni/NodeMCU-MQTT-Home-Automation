@@ -17,6 +17,7 @@ https://esp8266.ru/esplorer/
 - 3.3V Person Sensor that can be shopped online easily.
 - Wemos Uno R1 (Arduino Uno WIFI based)
 - DHT temperature sensor.
+- Raspberry Pi or PC running linux (There is also a Windows distribution of mosquitto,with same utility).
 
 ## Creating an MQTT broker using mosquitto and Ubuntu/Raspbian
 ### Things we Need:
@@ -33,6 +34,10 @@ sudo apt install mosquitto'
 ```
 mosquitto
 ```
+
+>- NOTE: If you need to run mosquitto on Windows use this tutorial:
+ https://sivatechworld.wordpress.com/2015/06/11/step-by-step-installing-and-configuring-mosquitto-with-windows-7/
+
 ### Configuring mosquitto
 mosquitto is by default controlled by /etc/mosquitto/mosquitto.conf but it is a reccomendation to leave the defaults alone an create your own .conf file.
 #### First lets create an user and password for it
