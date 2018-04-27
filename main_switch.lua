@@ -18,8 +18,7 @@
    
     node:subscribe(mqtt_topic,0, function(conn) 
     -- SET tmr to go update light status every given ms 
-    -- Note that bigger ms the lower energy drained
-         
+    -- Note that bigger ms the lower energy drained        
   end)
   
     end,
