@@ -10,21 +10,23 @@
 --  We recommend using and USER and PASSWORD for MQTT for security reasons
 
 -- Wifi Credentials
-wifi_SSID = "INFINITUMF05E"
-wifi_PASSWORD =1539358075
+-- wifi_SSID is STRING TYPE (="SSID")
+-- wifi_PASSWORD can be string (wifi_PASSWORD="password") or int (wifi_PASSWORD=12345789)
+wifi_SSID = "SSID HERE"
+wifi_PASSWORD =PASSWORDHERE
 
 -- MQTT Credentials
 -- Uncomment mqtt_user and mqtt_pass if Mqtt server is secured
 mqtt_idclient=node.chipid()-- Client id name for auth in MQTT server;
 mqtt_keepalive=120
--- mqtt_user="USERNAME"
--- mqtt_pass="PASSWORD"
 mqtt_ip="192.168.1.76"
 mqtt_port=1883
 mqtt_topic="home/prueba"
+-- mqtt_user="USERNAME"
+-- mqtt_pass="PASSWORD"
+
 
 -- START WIFI CONNECTION
-
 -- All print("") are serial info for performance delete or comment them
 print("Starting configuring Wifi...")
 
