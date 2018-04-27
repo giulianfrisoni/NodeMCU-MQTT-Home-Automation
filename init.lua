@@ -13,12 +13,12 @@
 wifi_SSID = "INFINITUMF05E"
 wifi_PASSWORD =1539358075
 
-
 -- MQTT Credentials
+-- Uncomment mqtt_user and mqtt_pass if Mqtt server is secured
 mqtt_idclient=node.chipid()-- Client id name for auth in MQTT server;
 mqtt_keepalive=120
-mqtt_user="USERNAME"
-mqtt_pass="PASSWORD"
+-- mqtt_user="USERNAME"
+-- mqtt_pass="PASSWORD"
 mqtt_ip="192.168.1.76"
 mqtt_port=1883
 mqtt_topic="home/prueba"
@@ -58,12 +58,13 @@ function init()
     print("init.lua was erased or renamed")
   else
   
-    print("Starting")
-  --  file.close("init.lua")
-   -- If Electric switch = main_switch
+  print("Starting Main function file")
+  -- Close init.lua so if a restart or power goes off the archive is not damaged  
+    file.close("init.lua")
+    
+   -- IF Electric switch = main_switch
    -- IF Touch controller = main_touch
    -- IF wifi Temperature and Humid = main_temperature
-   --
    dofile("main_touch.lua")
   end
 end
