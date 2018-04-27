@@ -2,7 +2,6 @@
 --          Main code that runs on bootloader
 --          Used for starting Wifi connection and starting main file
 --          Saved on flash memory inside NodeMcu
---init.lua  Authors: Daniela Beckmann & Giulian Frisoni
 --         First file that is uploaded, should always be called init.lua
 --          
 --  credentials, 'SSID' and 'PASSWORD', MQTT server info used on both main files
