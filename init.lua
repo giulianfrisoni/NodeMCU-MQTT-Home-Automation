@@ -32,7 +32,9 @@ print("Starting configuring Wifi...")
 wifi.setmode(wifi.STATION)
 wifi.sta.config{ssid=wifi_SSID, pwd=wifi_PASSWORD} 
 
--- Once Wifi is configured use garbage collector to clean memory
+-- Once Wifi is configured define wifi variables to nil so in built garbage collector  cleans memory
+wifi_SSID = nil
+wifi_PASSWORD = nil
 
 -- Connect to Wifi as Station
 wifi.sta.connect()
