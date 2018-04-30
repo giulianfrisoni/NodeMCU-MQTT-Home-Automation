@@ -1,10 +1,9 @@
--- main_out.lua Main code for mqtt connections and set mode of Node
+-- main_temperature.lua Main code for mqtt connections and set mode of Node
 -- Authors  Daniela Beckmann Giulian Frisoni 
--- Pin mode for SENSOR node is INPUT otherwise OUTPUT for actuator
 -- You can select whatever pin you need, reference nodeMCU GPIO
  -- Pin mode for SENSOR node is INPUT type
 -- You can select whatever pin you need, reference nodeMCU GPIO
--- Be careful using pins D0, D4, D3 and D5 as they interfere when LOW or HIGH on the correct startup from flash memory
+-- Be careful using pins D0, D4, D3 and D5 as they interfere when LOW or HIGH on normal boot
    local pin=2
 
 -- Set status of GPIO to input or trigger as needed
