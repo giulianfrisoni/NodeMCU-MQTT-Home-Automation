@@ -62,4 +62,5 @@ There are other parameter we can change as listeners,ports,etc in this tutorial 
 
 https://mosquitto.org/man/mosquitto-conf-5.html#
 
+## Schemas for all 3 modules ndoes are on the Schemas folder inside this repository
 
