@@ -62,5 +62,47 @@ There are other parameter we can change as listeners,ports,etc in this tutorial 
 
 https://mosquitto.org/man/mosquitto-conf-5.html#
 
-## Schemas for all 3 modules ndoes are on the Schemas folder inside this repository
+## Node Setup
+***Install ch-341 driver in order to windows to recognize your NodeMCU***
+*** DOWNLOAD FROM HERE http://www.wch.cn/downloads/file/5.html ***
 
+### Flash your nodeMCU firmware first so it can work with lua and not AP commands:
+- Get Firmware from the firmware folder in this repository or build one on 
+   https://nodemcu-build.com/
+- Use pyflasher to flash your nodeMCU get it from here:
+  https://github.com/marcelstoer/nodemcu-pyflasher/releases
+- Connect your nodeMCU via microusb to computer and in pyflasher browse to firmware.bin file and click on flash nodeMCU. WAIT TILL     FINISHED.
+
+
+### PCB and electronics components for each nodeMCU module
+- All electronic schemas are in this repository on the schemas folder.
+#### Depending on what node you will use this components:
+- For switch node, use: NodeMCU, relay and power supply.
+- For touch node, use: NodeMCU, TTP223 and power supply.
+- For temperature node, use: NodeMCU, DHT11/22 and power supply.
+
+- For power suppy, you can use the VIN and GND pins connected to a 5V supply or use the micro USB connector on the NodeMCU.
+
+### NodeMCU code upload and fields to change in code.
+- You will need and lua and code compiler for nodeMCU i reccomend ESplorer, you can get it from here:
+https://esp8266.ru/esplorer/
+#### the init.lua file is mandatory for all modules as it initializes wifi connections and mqtt credentials, chamge the next fields:
+-  Change code to match your setup.
+-  wifi_SSID = "SSID HERE"
+-  wifi_PASSWORD =PASSWORDHERE
+-  mqtt_ip="192.168.1.76"
+-  mqtt_port=1883
+-  mqtt_topic="home/topic1"
+-  dofile("main_touch.lua") - Put here what of the 3 main_*.lua you will use on that module.
+
+#### for the main_*.lua files change on what pin you will be using the sensors, or relays.
+- pin=<nummber of pin used>.
+ 
+ #### Process
+ - Get Esplorer.
+ - Download code files.
+ - Change variables for init.lua to match your setup of wifi and mqtt broker.
+ - Select what module of the main_*.lua files you will use and change the pin number to match your nodeMCU setup.
+ - Use "Send to ESP" button to test your code.
+ - Once your code works use the "Save to ESP" button to save on the memory of esp your code.
+ 
