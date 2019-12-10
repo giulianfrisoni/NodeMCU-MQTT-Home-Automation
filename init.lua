@@ -1,4 +1,4 @@
---init.lua  Authors: Daniela Beckmann Garcia & Giulian Frisoni
+--init.lua  Authors: Giulian Frisoni
 --          Main code that runs on bootloader
 --          Used for starting Wifi connection and starting main file
 --          Saved on flash memory inside NodeMcu
