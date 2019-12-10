@@ -1,5 +1,5 @@
 # MQTT-Home-Automation
-Ana Daniela Beckmann Garcia and Giulian Frisoni Lopez
+ Giulian Frisoni Lopez
 
 Implementation of LUA and MQTT for easy replication of Home automation basic nodes ( Actuator and Sensor);
 
